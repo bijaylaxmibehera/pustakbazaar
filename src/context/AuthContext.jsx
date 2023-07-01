@@ -10,9 +10,19 @@ export function AuthProvider({ children }) {
     console.log("login handler called")
   }
 
+  const signUpHandler=({
+    email,
+    password,
+    confirmPassword,
+    firstName,
+    lastName,
+  })=>{
+    console.log("sign up handler called")
+  }
+
   return (
     <>
-      <AuthContext.Provider value={{loginHandler}}>
+      <AuthContext.Provider value={{loginHandler,signUpHandler}}>
         {children}
       </AuthContext.Provider>
     </>

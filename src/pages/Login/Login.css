@@ -13,9 +13,9 @@
  margin-bottom: 1rem;
 }
 input{
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 6px 10px;
-    border-radius: 5px;
+   
     border: 1px solid rgb(218, 216, 216);
     margin: 8px;
 }
@@ -48,7 +48,7 @@ input{
 }
 .signup-btn a{
     color: var(--dark-blue);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 @media only screen and (min-width:768px){
     .login-page{
