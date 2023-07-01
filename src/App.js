@@ -1,13 +1,14 @@
-import "./App.css";
+import './App.css'
+import { Header } from './component/Header/Header'
+import { PrivateRoutes } from './component/PrivateRoutes'
 
-
-function App() {
+function App () {
   return (
-    <div className="App">
-     
-     
+    <div className='App'>
+      <Header />
+      <PrivateRoutes />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

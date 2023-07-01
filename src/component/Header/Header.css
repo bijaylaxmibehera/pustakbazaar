@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    height: 10vh;
+    background-color:var(--dark-blue);
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-family: var(--font-1);
+   
+}
+/* .nav-left{
+   
+} */
+
+.nav-left h3 a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.3rem;
+}
+.nav-list{
+    text-decoration: none;
+    margin: 0 5px;
+    color: white;
+}
+.nav-right{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+/* .nav-right .login-button {
+    background: var(--darkOrange);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+.nav-right .login-button a{
+    color: #fff;
+    font-size: 0.9rem;
+} */
+.badge {
+    position: relative;
+}
+.badge div {
+    display: flex;
+    background-color: red;
+    color: #fff;
+    border-radius: 999px;
+    justify-content: center;
+    align-items: center;
+    font-size: .7rem;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%,-50%);
+}
+i.fa.fa-home:hover, a.badge.nav-list:hover,a.nav-list:hover{
+    color: rgb(255, 234, 0);
+}
+
+@media only screen and (min-width:768px){
+    
+}
+@media only screen and (min-width:1024px){
+    .nav-left h3 a{
+        font-size: 1.7rem;
+    }
+    .nav-right{
+        font-size: 1.5rem;
+    }
+    i.fa.fa-home{
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,66 @@
+.login-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--dark-blue);
+    padding: 30px 40px;
+    margin:20px auto;
+    max-width: 90vw;
+    border-radius: 10px;
+}
+.login-page h2{
+ color: var(--dark-blue);
+ margin-bottom: 1rem;
+}
+input{
+    font-size: 1.2rem;
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(218, 216, 216);
+    margin: 8px;
+}
+.login-details:focus{
+    border-color: var(--dark-blue);
+}
+.btn-container{
+    display: flex;
+    flex-direction: column;
+}
+.btn-container button{
+    cursor: pointer;
+    margin: 7px;
+    padding: 10px;
+    border-radius: 7px;
+    font-weight: 600;
+}
+.login-btn,.testuser-btn{
+    background-color: var(--dark-blue);
+    color: white;
+}
+.login-btn:hover,.testuser-btn:hover{
+    background: none;
+    border: 2px solid var(--dark-blue);
+    color: var(--dark-blue);
+}
+.signup-btn{
+    background: none;
+    
+}
+.signup-btn a{
+    color: var(--dark-blue);
+    font-size: 1.2rem;
+}
+@media only screen and (min-width:768px){
+    .login-page{
+        max-width: 40vw;
+    }
+}
+@media only screen and (min-width:1024px){
+ .login-page{
+    font-size: 1.2rem;
+    max-width: 40vw;
+ }
+ .btn-container button{
+    font: 1.2rem;
+ }
+}
