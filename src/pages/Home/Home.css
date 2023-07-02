@@ -45,13 +45,18 @@ h1{
     font-weight: 500;
 
 }
-.responsive-grid div{
+.responsive-grid div:hover{
     cursor: pointer;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 10px;
+    transition: ease-in-out 30ms;
 }
 
 i.fa.fa-truck{
     transform: scaleX(-1);
     color: rgb(48, 48, 244);
+    font-size: 1.75rem;
 }
 .available-category{
    text-align: center;
