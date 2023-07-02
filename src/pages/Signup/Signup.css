@@ -15,6 +15,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  
+}
+.signUp_label_accept p{
     color: var(--darkOrange);
 }
 .signUp_btn{

@@ -1,0 +1,115 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.background-overlay {
+    width: 95vw;
+    height: 50vh;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.background-overlay img {
+    width: 100%;
+    height: 100%;
+    /* opacity: 0.6; */
+}
+
+.main-text {
+    position: absolute;
+    z-index: 1;
+    top: 30vh;
+    left: 5vw;
+    width: 50%;
+    font-size: 0.8rem;
+    color:whitesmoke;
+  
+}
+.main-text h1{
+    font-weight: 500;
+}
+.shop-btn{
+    margin: 10px 0;
+}
+.shop-btn a{
+    color: white;
+}
+.quality-service{
+   width: 90vw;
+   margin:auto;
+   text-align: center;
+   padding: 1rem;
+}
+h1{ 
+    margin-bottom:1.5rem ;
+    font-weight: 500;
+
+}
+.responsive-grid div{
+    cursor: pointer;
+}
+
+i.fa.fa-truck{
+    transform: scaleX(-1);
+    color: rgb(48, 48, 244);
+}
+.available-category{
+   text-align: center;
+   width: 95vw;
+   margin: auto;
+}
+
+.category-btn{
+    gap: 1rem;
+}
+.category-btn button{
+    background: none;
+    border: 1px solid var(--dark-blue);
+    cursor: pointer;
+    padding: 5px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+
+}
+.category-btn button:hover{
+    background-color: var(--dark-blue);
+    color: white;
+    
+}
+
+
+@media only screen and (min-width:768px) {
+    .background-overlay {
+        width: 90vw;
+        height: 60vh;
+    }
+    .main-text {
+        top: 35vh;
+        left: 10vw;
+        font-size:1rem;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .background-overlay {
+        width: 90vw;
+        height: 75vh;
+    }
+
+
+   .main-text {
+        top: 47vh;
+        left: 10vw;
+        /* font-size: 1.5rem; */
+    }
+
+    .quality-service{
+        padding:3rem 2rem;
+        margin-bottom:2rem ;
+    }
+    .quality-service h1{
+        margin-bottom: 3rem;
+    }
+}
