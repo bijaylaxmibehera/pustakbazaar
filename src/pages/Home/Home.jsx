@@ -47,7 +47,7 @@ export function Home() {
       </section>
       <section className="quality-service">
         <h1>We provide best customer experience</h1>
-        <div className="responsive-grid">
+        <div className="responsive-grid quality">
           <div>
             <TaskAltIcon color="success" />
             <p>Best quality paper</p>
