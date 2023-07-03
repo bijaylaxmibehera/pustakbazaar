@@ -7,7 +7,7 @@
 nav{
     display: flex;
     justify-content: space-around;
-    height: 10vh;
+    height: 6vh;
     background-color:var(--dark-blue);
     align-items: center;
     position: sticky;
@@ -76,9 +76,15 @@ i.fa.fa-home:hover, a.badge.nav-list:hover,a.nav-list:hover{
 }
 
 @media only screen and (min-width:768px){
+    nav{
+        height: 8vh;
+    }
     
 }
 @media only screen and (min-width:1024px){
+    nav{
+        height: 10vh;
+    }
     .nav-left h3 a{
         font-size: 1.7rem;
     }

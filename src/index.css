@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 :root{
-  --dark-blue:#053363;
+  /* --dark-blue:#053363; */
+  --dark-blue:#09519f;
   --purple:#9c19e0;
   --pale-white:#f4fafd;
   --font-1: 'Montserrat', sans-serif;
