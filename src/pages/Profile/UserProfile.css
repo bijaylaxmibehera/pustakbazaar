@@ -1,0 +1,48 @@
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: auto;
+    width: 89vw;
+    border: 2px solid var(--dark-blue);
+    border-radius: 10px;
+    gap: 1.7rem;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+}
+.logout-btn{
+    background-color:rgb(64, 100, 245);
+}
+.logout-btn a{
+    color: white;
+}
+.current-user-info p span{
+    font-weight: 600;
+}
+.current-user-info h3,.user-info{
+    margin-bottom: 1rem;
+}
+@media only screen and (min-width:768px){
+ .user-profile{
+    flex-direction: row;
+    width: 60vw;
+    height: 30vh;
+    margin:2rem auto;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+ }
+}
+
+@media only screen and (min-width:1024px) {
+    .user-profile {
+        width: 40vw;
+        margin:2rem auto;
+        justify-content: center;
+        /* align-items: center; */
+        gap: 2rem;
+        padding: 2rem;
+    }
+   
+}

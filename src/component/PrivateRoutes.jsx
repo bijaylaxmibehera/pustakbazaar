@@ -4,6 +4,7 @@ import { Login } from "../pages/Login/Login";
 import { Signup } from "../pages/Signup/Signup";
 import { Home } from "../pages/Home/Home";
 import { Product } from "../pages/Product/Product";
+import { UserProfile } from "../pages/Profile/UserProfile";
 
 export function PrivateRoutes(){
     return (
@@ -14,6 +15,7 @@ export function PrivateRoutes(){
           <Route path="/login" element={<Login/>}/>
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/products" element={<Product/>}/>
+          <Route path="/profile" element={<UserProfile/>}/>
         </Routes>
         </>
     )
