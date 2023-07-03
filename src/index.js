@@ -4,6 +4,7 @@ import './index.css'
 import App from './App'
 import { makeServer } from './server'
 import { BrowserRouter as Router } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify';
 
 import { AuthContext, AuthProvider } from './context/AuthContext'
 import { DataContext, DataProvider } from './context/DataContext'
@@ -16,6 +17,7 @@ export { AuthContext, DataContext, FilterContext }
 
 ReactDOM.render(
   <React.StrictMode>
+    <ToastContainer />
     <Router>
       <AuthProvider>
         <DataProvider>

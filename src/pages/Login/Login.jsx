@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../";
 
 export function Login() {
-const {loginHandler}=useContext(AuthContext);
+const {loginHandler,currentUser}=useContext(AuthContext);
 
 const [loginDetails,setLoginDetails]=useState({email:"",password:""});
 const testUserCredential={
@@ -17,7 +17,7 @@ const handleSubmit=(e)=>{
     loginHandler(loginDetails);
     setLoginDetails({email:"",password:""})
 }
-
+console.log(currentUser)
   return (
     <>
       <div className="login-page">
