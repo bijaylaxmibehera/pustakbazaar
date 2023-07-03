@@ -4,10 +4,15 @@ import { useContext } from "react";
 import PhoneCallbackIcon from "@mui/icons-material/PhoneCallback";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
-import { DataContext } from "../../";
+import { DataContext ,FilterContext} from "../../";
 
 export function Home() {
   const { categories } = useContext(DataContext);
+  const { dispatchFilters } = useContext(FilterContext)
+
+  const setCategory = category => {
+    dispatchFilters({ type: 'ADD_CATEGORY', payload: category })
+  }
 
   return (
     <>
@@ -38,7 +43,7 @@ export function Home() {
             <>
               <div key={itemCat} className="category-card-overlay">
                 <NavLink to="/products">
-                  <button>{itemCat}</button>
+                  <button onClick={() => setCategory(itemCat)}>{itemCat}</button>
                 </NavLink>
               </div>
             </>
