@@ -2,7 +2,6 @@ import "./Cart.css";
 import { useContext } from "react";
 import { DataContext } from "../../";
 import { NavLink } from "react-router-dom";
-
 import { CartProductCard } from "../../component/CartProductCard/CartProductCard";
 
 export function Cart() {

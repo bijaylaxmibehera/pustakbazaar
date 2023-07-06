@@ -1,11 +1,14 @@
 import { CalculateDiscount } from "../../utilities/CalculateDiscount";
-import { removeFromCart,updateQuantity  } from "../../services/CartService";
+import { removeFromCart, updateQuantity } from "../../services/CartService";
 import { useContext } from "react";
 import { AuthContext, DataContext } from "../../";
+import { isProductInWishlist } from "../../utilities/ProductUtilities";
+import { addToWishlist } from "../../services/WishlistService";
+import { NavLink } from "react-router-dom";
 
 export function CartProductCard({ book }) {
   const { _id: id, img, name, author, price, originalPrice, qty } = book;
-  const {dataDispatch } = useContext(DataContext);
+  const { dataDispatch, wishlist } = useContext(DataContext);
   const { token } = useContext(AuthContext);
 
   const removeItemFromCartHandler = (id) => {
@@ -16,11 +19,14 @@ export function CartProductCard({ book }) {
     if (quantity === 1) {
       removeFromCart(dataDispatch, id, token);
     } else {
-        updateQuantity (dataDispatch, id, token, actionType);
+      updateQuantity(dataDispatch, id, token, actionType);
     }
   };
 
- 
+  const moveToWishlistHandler = (id) => {
+    addToWishlist(dataDispatch, book, token);
+    removeFromCart(dataDispatch, id, token);
+  };
   return (
     <div className="itmes-card" key={id}>
       <div class="card horizontal-container">
@@ -47,13 +53,13 @@ export function CartProductCard({ book }) {
             <div class="qty">
               <button
                 class="minus"
-                disabled={qty=== 1}
+                disabled={qty === 1}
                 onClick={() => quantityHandler(id, "DECREMENT", qty)}
               >
                 -
               </button>
               {/* <input class="qty-count" type="number" value={quantity} /> */}
-              <p>{ qty}</p>
+              <p>{qty}</p>
               <button
                 class="add"
                 onClick={() => quantityHandler(id, "INCREMENT")}
@@ -70,7 +76,17 @@ export function CartProductCard({ book }) {
           >
             REMOVE
           </button>
-          <button class="later-btn">MOVE TO WISHLIST</button>
+          {isProductInWishlist(wishlist, id) ? (
+            <NavLink to="/wishlist">
+              <button class="later-btn">ALREADY IN WISHLIST</button>
+            </NavLink>
+          ) : (
+            <NavLink to="/cart">
+              <button class="later-btn" onClick={()=>moveToWishlistHandler(id)}>
+                MOVE TO WISHLIST
+              </button>
+            </NavLink>
+          )}
         </div>
       </div>
     </div>

@@ -6,15 +6,16 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 export function UserProfile() {
   const { currentUser, logoutHandler } = useContext(AuthContext);
+
   //   console.log(currentUser);
   const navigate = useNavigate();
   const location = useLocation();
 
-    if (!currentUser) {
-      return  navigate(location?.state?.from?.pathname ?? "/login");
-    }
+  if (!currentUser) {
+    return navigate(location?.state?.from?.pathname ?? "/login");
+  }
 
-  const { firstName, lastName, email, cart, wishlist } = currentUser;
+  const { firstName, lastName, email } = currentUser;
 
   return (
     <>
@@ -27,14 +28,13 @@ export function UserProfile() {
             <h3>
               {firstName} {lastName}
             </h3>
-            <p className="user-info"><span>Email: </span> {email}</p>
-            <p className="user-info"><span>Items in cart:</span> {cart.length}</p>
-            <p className="user-info"><span>Items in wishlist:</span> {wishlist.length}</p>
+            <p className="user-info">
+              <span>Email: </span> {email}
+            </p>
             <button onClick={() => logoutHandler()} className="btn logout-btn">
-            <NavLink to="/">Logout</NavLink>
-          </button>
+              <NavLink to="/">Logout</NavLink>
+            </button>
           </div>
-          
         </div>
       )}
     </>
