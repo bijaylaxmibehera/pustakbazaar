@@ -63,7 +63,13 @@
     gap: 2px;
     font-weight: var(--font-semiBold);
 }
+.goto-cart-btn{
+    background-color: var(--link);
 
+}
+.goto-cart-btn a{
+    color: white;
+}
 
 .card-description {
     text-align: left;

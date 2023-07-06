@@ -1,8 +1,14 @@
 import "./ProductCard.css";
 import { CalculateDiscount } from "../../utilities/CalculateDiscount";
-
+import { AuthContext, DataContext } from "../../";
+import { addToCart } from "../../services/CartService";
+import { isProductInCart,isProductInWishlist } from "../../utilities/ProductUtilities";
+import { useNavigate,useLocation, NavLink } from "react-router-dom";
+import { useContext } from "react";
 
 export function ProductCard({ product }) {
+  const navigate=useNavigate();
+  const location=useLocation();
   const {
     _id: id,
     img,
@@ -13,6 +19,25 @@ export function ProductCard({ product }) {
     isBestSeller,
     rating,
   } = product;
+const {token}=useContext(AuthContext);
+const {dataDispatch, cart, wishlist}=useContext(DataContext);
+
+const isInCart = isProductInCart(cart,id);
+const isInWishlilst = isProductInWishlist(wishlist,id);
+
+const addToCartHandler=(e)=>{
+  e.stopPropagation();
+  if (token) {
+    if (isInCart) {
+      navigate("/cart");
+    } else {
+      addToCart(dataDispatch, product, token);
+    }
+  } else {
+    navigate("/signin", { state: { from: location } });
+  }
+}
+
   return (
     <>
       <div class="card">
@@ -42,10 +67,21 @@ export function ProductCard({ product }) {
           </div>
           <p className="price-percentage"><CalculateDiscount price={price} originalPrice={originalPrice}/>% Off</p>
         </div>
-        <div class="bottom-btn cart">
+        {/* <div class="bottom-btn cart">
           <button class="btn default add-cart">
             Add to Cart</button>
+        </div> */}
+        <div>
+          {isInCart ? (
+            <button class="btn default add-cart goto-cart-btn">
+            <NavLink to="/cart">Go to cart</NavLink></button>
+          ):(
+            <button class="btn default add-cart" onClick={addToCartHandler}>
+            Add to Cart</button>
+      
+          )}
         </div>
+       
       </div>
     </>
   );

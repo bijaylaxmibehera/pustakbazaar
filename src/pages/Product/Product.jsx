@@ -5,10 +5,10 @@ import { ProductCard } from "../../component/ProductCard/ProductCard";
 import { FilterBar } from "../../component/FilterBar/FilterBar";
 
 export function Product() {
-  const { state } = useContext(DataContext);
+  const { products } = useContext(DataContext);
   const { filters } = useContext(FilterContext);
 
-  const filteredProducts = state.products
+  const filteredProducts =products
     .filter(
       (item) =>
         filters.priceRange === 0 ||
