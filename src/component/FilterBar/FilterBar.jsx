@@ -1,5 +1,5 @@
 import "./FilterBar.css";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { DataContext, FilterContext } from "../../";
 
 export function FilterBar() {
