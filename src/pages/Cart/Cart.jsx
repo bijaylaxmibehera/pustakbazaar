@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { DataContext } from "../../";
 import { NavLink } from "react-router-dom";
 import { CartProductCard } from "../../component/CartProductCard/CartProductCard";
+import { OrderSummary } from "../../component/OrderSummary/OrderSummary";
 
 export function Cart() {
   const { cart } = useContext(DataContext);
@@ -28,6 +29,9 @@ export function Cart() {
                 <CartProductCard book={book} key={book._id}/>
                ))}
               </ul>
+              <div className="order-summary-component">
+                <OrderSummary/>
+              </div>
             </div>
            
           )}

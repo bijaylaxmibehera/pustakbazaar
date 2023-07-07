@@ -5,6 +5,7 @@ import { AuthContext, DataContext } from "../../";
 import { isProductInWishlist } from "../../utilities/ProductUtilities";
 import { addToWishlist } from "../../services/WishlistService";
 import { NavLink } from "react-router-dom";
+import "./CartProductCard.css";
 
 export function CartProductCard({ book }) {
   const { _id: id, img, name, author, price, originalPrice, qty } = book;
@@ -29,7 +30,7 @@ export function CartProductCard({ book }) {
   };
   return (
     <div className="itmes-card" key={id}>
-      <div class="card horizontal-container">
+      <div class="card horizontal-container cart-card">
         <div class="card-horizontal">
           <img class="card-img horizontal-img" src={img} alt={name} />
           <div class="card-info">

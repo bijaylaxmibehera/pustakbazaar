@@ -1,0 +1,15 @@
+.cart-card{
+    width: 80vw;
+}
+
+ @media screen and (min-width: 768px){
+    .cart-card{
+        width:45vw;
+    }
+} 
+
+ @media screen and (min-width: 1024px){
+    .cart-card{
+        width: 35vw;
+    }
+} 
