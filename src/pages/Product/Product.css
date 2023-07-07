@@ -20,6 +20,11 @@
     padding-top: 5vh;
     color: var(--danger);
 }
+@media screen and (min-width:768px){
+    .product-list{
+        margin: 10px 30px;
+    }
+}
 
 @media screen and (min-width:1024px) {
     .product-page {
@@ -43,6 +48,8 @@
         width: 80vw;
         height: 100vh;
         overflow-y: scroll;
+        overflow-x: hidden;
+        margin:0;
     }
 
     .not-availed-products {
