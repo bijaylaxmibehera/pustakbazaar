@@ -10,15 +10,15 @@ export function Cart() {
   return (
     <>
       <div className="cart-page">
-        <div className="cart-heading-text">
+        <div className="heading-text">
           <h1>My cart ({cart.length})</h1>
         </div>
         <div className="cart-products">
           {cart?.length === 0 ? (
-            <div className="empty-cart">
+            <div className="empty">
               <p>Hey your cart looks empty</p>
               <NavLink to="/products">
-                <button>Add products</button>
+                <button className="btn add-btn">Add products</button>
               </NavLink>
             </div>
           ) : (

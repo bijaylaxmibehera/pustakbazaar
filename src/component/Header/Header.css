@@ -8,6 +8,7 @@ nav{
     display: flex;
     justify-content: space-around;
     height: 6vh;
+    width: 100vw;
     background-color:var(--dark-blue);
     align-items: center;
     position: sticky;

@@ -22,14 +22,14 @@ export function Wishlist() {
 
   return (
     <>
-      <div className="wishlist-heading-text">
+      <div className="heading-text">
         <h3>My wishlist({wishlist.length})</h3>
       </div>
       {wishlist.length === 0 ? (
-        <div className="empty-wishlist">
+        <div className="empty">
           <p>Your wishlist is empty</p>
           <NavLink to="/products">
-            <button className="btn empty-wishlist-btn">Add now</button>
+            <button className="btn add-btn">Add now</button>
           </NavLink>
         </div>
       ) : (

@@ -1,9 +1,9 @@
-.wishlist-heading-text{
+.heading-text{
     text-align: center;
     margin-bottom:1rem ;
 }
 
-.empty-wishlist{
+.empty{
     display:flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@
     font-weight:var(--font-semiBold);
     font-size: 1.2rem;
 }
-.empty-wishlist-btn{
+.add-btn{
  background-color: rgb(229, 58, 255);
  margin-top: 1rem;
 }
@@ -21,7 +21,7 @@
     
 }
 @media only screen and (min-width:1024px){
-.empty-wishlist{
-    height: 70vh;
+.empty{
+    height: 50vh;
 }
 }
