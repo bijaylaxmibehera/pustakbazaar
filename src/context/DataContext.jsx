@@ -1,4 +1,4 @@
-import { createContext, useEffect, useReducer ,useState} from "react";
+import { createContext, useEffect, useReducer, useState } from "react";
 import { initialState,dataReducer } from "../reducer/DataReducer";
 import { getProducts } from "../services/ProductService";
 
@@ -14,10 +14,10 @@ export const DataContext = createContext({
 
 export function DataProvider({ children }) {
   const [state, dispatch] = useReducer(dataReducer, initialState);
-  const [loader, setLoader] = useState(false);
+  const [loader,setLoader]=useState(false);
 
   useEffect(() => {
-    getProducts(setLoader,dispatch);
+    getProducts(dispatch);
   }, []);
 
   const categories = state.products.reduce((acc, currProd) => {

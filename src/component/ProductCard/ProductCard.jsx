@@ -57,9 +57,10 @@ export function ProductCard({ product }) {
     }
     setIsWishlistActive(!isWishlistActive);
   };
-
+  // onClick={() => navigate(`/books/${product?.name.split(" ").join('-')}/${product._id}`)}
   return (
     <>
+    <div className="product-card" onClick={() => navigate(`/books/${product?.name.split(" ").join('-')}/${product._id}`)}>
       <div class="card">
         <img class="card-img" src={img} alt={name} />
 
@@ -109,6 +110,7 @@ export function ProductCard({ product }) {
             </button>
           )}
         </div>
+      </div>
       </div>
     </>
   );

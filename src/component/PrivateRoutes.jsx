@@ -7,6 +7,7 @@ import { Product } from "../pages/Product/Product";
 import { UserProfile } from "../pages/Profile/UserProfile";
 import { Cart } from "../pages/Cart/Cart";
 import { Wishlist } from "../pages/Wishlist/Wishlist";
+import { SingleProduct } from "../pages/SingleProduct/SingleProduct";
 
 export function PrivateRoutes(){
     return (
@@ -17,9 +18,10 @@ export function PrivateRoutes(){
           <Route path="/login" element={<Login/>}/>
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/products" element={<Product/>}/>
+          <Route path="/books/:name/:id" element={<SingleProduct/>}/>
           <Route path="/cart" element={<Cart/>}/>
           <Route path="/wishlist" element={<Wishlist/>}/>
-
+           
           <Route path="/profile" element={<UserProfile/>}/>
         </Routes>
         </>
