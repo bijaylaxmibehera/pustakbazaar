@@ -1,12 +1,13 @@
 import './App.css'
 import { Header } from './component/Header/Header'
-import { PrivateRoutes } from './component/PrivateRoutes'
+import { RouteDetails } from './component/RouteDetails/RouteDetails'
+
 
 function App () {
   return (
     <div className='App'>
       <Header />
-      <PrivateRoutes />
+      <RouteDetails/>
     </div>
   )
 }
