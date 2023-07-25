@@ -6,6 +6,7 @@ import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import SwapHorizIcon from "@mui/icons-material/SwapHoriz";
 import { DataContext, FilterContext } from "../../";
 import { Loading } from "../../component/Loading/Loading";
+import { Footer } from "../../component/Footer/Footer";
 
 export function Home() {
   const { categories, loader } = useContext(DataContext);
@@ -98,6 +99,9 @@ export function Home() {
               </div>
             </div>
           </section>
+          <footer>
+            <Footer/>
+          </footer>
         </>
       )}
     </>

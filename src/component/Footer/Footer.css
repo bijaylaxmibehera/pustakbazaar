@@ -1,0 +1,42 @@
+.footer-section{
+    display: flex;
+    background-color: var(--dark-blue);
+    color: white;
+    height: 35vh;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+.footer-section h1{
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+a{
+    color: white;
+    margin-right: 0.5rem;
+}
+i.fa.fa-github, i.fa.fa-twitter, i.fa.fa-linkedin{
+    font-size: 1.7rem;
+    margin-right: 1.3rem;
+}
+.right-sec a:hover{
+    text-decoration: underline;
+    font-size: 1.1rem;
+}
+@media only screen and (min-width:768px){
+    .footer-section{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+      }
+}
+@media only screen and (min-width:1024px){
+  .footer-section{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 30vh;
+  }
+}
