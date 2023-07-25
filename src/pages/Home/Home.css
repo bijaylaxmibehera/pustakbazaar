@@ -40,16 +40,17 @@ body{
    text-align: center;
    padding: 1rem;
 }
-h1{ 
-    margin-bottom:1.5rem ;
-    font-weight: 500;
-
+.quality div{
+    padding: 20px;
+    border-radius: 10px;
+}
+.quality div p{
+    color: gray;
+    font-size: 0.8rem;
 }
 .quality div:hover{
     cursor: pointer;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.6);
-    padding: 20px;
-    border-radius: 10px;
     transition: ease-in-out 30ms;
 }
 
@@ -63,7 +64,9 @@ i.fa.fa-truck{
    width: 95vw;
    margin: auto;
 }
-
+.available-category h1{
+    margin-bottom: 2rem;
+}
 .category-btn{
     gap: 1rem;
 }
@@ -83,8 +86,17 @@ i.fa.fa-truck{
     color: white;
     
 }
+.service-heading{
+    margin: 1.5rem;
+}
+.service-heading h1{
+    margin-bottom: 0;
+}
 
-
+h4{
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
 @media only screen and (min-width:768px) {
     .background-overlay {
         width: 90vw;
@@ -115,7 +127,7 @@ i.fa.fa-truck{
         padding:3rem 2rem;
         margin-bottom:2rem ;
     }
-    .quality-service h1{
+    /* .quality-service h1{
         margin-bottom: 3rem;
-    }
+    } */
 }
