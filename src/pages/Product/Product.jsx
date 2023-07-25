@@ -3,12 +3,13 @@ import { useContext } from "react";
 import { DataContext, FilterContext } from "../../";
 import { ProductCard } from "../../component/ProductCard/ProductCard";
 import { FilterBar } from "../../component/FilterBar/FilterBar";
+import { Loading } from "../../component/Loading/Loading";
 
 export function Product() {
-  const { products } = useContext(DataContext);
+  const { products, loader } = useContext(DataContext);
   const { filters } = useContext(FilterContext);
 
-  const filteredProducts =products
+  const filteredProducts = products
     .filter(
       (item) =>
         filters.priceRange === 0 ||
@@ -36,22 +37,26 @@ export function Product() {
   return (
     <>
       {/* <h1>Product page</h1> */}
-      <div className="product-page">
-        <div className="filters-bar">
-          <FilterBar />
+      {loader ? (
+        <Loading />
+      ) : (
+        <div className="product-page">
+          <div className="filters-bar">
+            <FilterBar />
+          </div>
+          <ul className="product-list">
+            {filteredProducts.length > 0 ? (
+              <div className="responsive-grid">
+                {filteredProducts.map((product) => (
+                  <ProductCard key={product._id} product={product} />
+                ))}
+              </div>
+            ) : (
+              <p className="not-availed-products">No product available</p>
+            )}
+          </ul>
         </div>
-        <ul className="product-list">
-          {filteredProducts.length > 0 ? (
-            <div className="responsive-grid">
-              {filteredProducts.map((product) => (
-                <ProductCard key={product._id} product={product} />
-              ))}
-            </div>
-          ) : (
-            <p className="not-availed-products">No product available</p>
-          )}
-        </ul>
-      </div>
+      )}
     </>
   );
 }

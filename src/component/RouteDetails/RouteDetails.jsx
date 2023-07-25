@@ -1,14 +1,16 @@
 import { Route, Routes } from "react-router";
 import Mockman from "mockman-js";
-import { Home } from "../../pages/Home/Home";
-import { Login } from "../../pages/Login/Login";
-import { Signup } from "../../pages/Signup/Signup";
-import { Product } from "../../pages/Product/Product";
 import { SingleProduct } from "../../pages/SingleProduct/SingleProduct";
-import { Cart } from "../../pages/Cart/Cart";
-import { Wishlist } from "../../pages/Wishlist/Wishlist";
-import { UserProfile } from "../../pages/Profile/UserProfile";
 import { PrivateRoute } from "../PrivateRoutes/PrivateRoutes";
+
+import {Home} from "../../pages/Home/Home";
+import {Login} from "../../pages/Login/Login";
+import {Signup} from "../../pages/Signup/Signup";
+import {Product} from "../../pages/Product/Product";
+import {Cart} from  "../../pages/Cart/Cart";
+import {Wishlist} from "../../pages/Wishlist/Wishlist";
+import {UserProfile} from "../../pages/Profile/UserProfile"
+
 
 export function RouteDetails() {
   return (

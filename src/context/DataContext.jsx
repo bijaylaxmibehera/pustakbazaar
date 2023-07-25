@@ -17,7 +17,7 @@ export function DataProvider({ children }) {
   const [loader,setLoader]=useState(false);
 
   useEffect(() => {
-    getProducts(dispatch);
+    getProducts(dispatch,setLoader);
   }, []);
 
   const categories = state.products.reduce((acc, currProd) => {
