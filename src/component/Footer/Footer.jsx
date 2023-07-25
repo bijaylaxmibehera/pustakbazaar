@@ -21,7 +21,7 @@ export function Footer() {
         </div>
         <div className="middle-sec">
             <h1>Pustak Bazaar</h1>
-            <p>Your online bazaar for all books</p>
+            <small>Your online bazaar for all books</small>
             <p>&copy; 2023 PUSTAK BAZAAR</p>
         </div>
         <div className="right-sec">
@@ -33,7 +33,6 @@ export function Footer() {
                 <NavLink to="/products">Books</NavLink>
                 <NavLink to="/cart">Cart</NavLink>
                 <NavLink to="/wishlist">Wishlist</NavLink>
-
                  
             </div>
         </div>

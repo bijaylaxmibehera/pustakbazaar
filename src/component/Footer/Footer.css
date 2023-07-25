@@ -31,6 +31,9 @@ i.fa.fa-github, i.fa.fa-twitter, i.fa.fa-linkedin{
         align-items: center;
         padding: 0;
       }
+      .footer-section h1{
+        margin-bottom: 0;
+      }
 }
 @media only screen and (min-width:1024px){
   .footer-section{
@@ -38,5 +41,8 @@ i.fa.fa-github, i.fa.fa-twitter, i.fa.fa-linkedin{
     justify-content: space-around;
     align-items: center;
     height: 30vh;
+  }
+  .left-sec div, .middle-sec p, .right-sec div{
+    margin-top: 1rem;
   }
 }

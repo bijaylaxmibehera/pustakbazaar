@@ -28,7 +28,7 @@ export function Wishlist() {
       ) : (
         <>
           <div className="heading-text">
-            <h3>My wishlist({wishlist.length})</h3>
+            <h1>My wishlist({wishlist.length})</h1>
           </div>
           {wishlist.length === 0 ? (
             <div className="empty">
