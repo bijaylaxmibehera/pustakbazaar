@@ -11,6 +11,7 @@ import {Cart} from  "../../pages/Cart/Cart";
 import {Wishlist} from "../../pages/Wishlist/Wishlist";
 import {UserProfile} from "../../pages/Profile/UserProfile"
 import { PageNotFound } from "../../pages/PageNotFound/PageNotFound";
+import { OrderPlaced } from "../../pages/OrderPlaced/OrderPlaced";
 
 
 export function RouteDetails() {
@@ -45,6 +46,14 @@ export function RouteDetails() {
           element={
             <PrivateRoute>
               <UserProfile />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/placedorder"
+          element={
+            <PrivateRoute>
+              <OrderPlaced />
             </PrivateRoute>
           }
         />

@@ -1,5 +1,6 @@
 import "./OrderSummary.css";
 import { useContext } from "react";
+import { useNavigate } from "react-router";
 import { DataContext } from "../../";
 import {
   getTotalPrice,
@@ -7,7 +8,8 @@ import {
 } from "../../utilities/ProductUtilities";
 
 export function OrderSummary() {
-  const { cart } = useContext(DataContext);
+  const { cart,dataDispatch } = useContext(DataContext);
+  const navigate=useNavigate();
 
   const deliveryCharges = 100;
   const totalItems = cart.reduce(
@@ -17,6 +19,11 @@ export function OrderSummary() {
   const totalPrice=getTotalPrice(cart);
   const totalDiscount = getTotalDiscount(cart);
   const totalAmount =(totalPrice-totalDiscount)+deliveryCharges;
+
+  const handleOrder=()=>{
+    dataDispatch({type:"CLEAR_CART" , payload:cart});
+    navigate("/placedorder");
+  }
   return (
     <>
       <div className="order-summary">
@@ -40,7 +47,7 @@ export function OrderSummary() {
           <p>₹{totalAmount}</p>
         </div>
         <p>You will save ₹{totalDiscount} on this order.</p>
-        <button className="order-btn">Place Order</button>
+        <button className="order-btn" onClick={handleOrder}>Place Order</button>
       </div>
     </>
   );
