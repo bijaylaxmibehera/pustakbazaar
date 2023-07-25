@@ -1,0 +1,20 @@
+.page-not-found{
+    width: 90vw;
+    margin: auto;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.page-not-found img{
+    width: 300px;
+    height: auto;
+}
+
+@media only screen and (min-width:768px){
+    .page-not-found img{
+        width: 400px;
+    }
+}
+@media only screen and (min-width:1024px){
+  
+}

@@ -10,6 +10,7 @@ import {Product} from "../../pages/Product/Product";
 import {Cart} from  "../../pages/Cart/Cart";
 import {Wishlist} from "../../pages/Wishlist/Wishlist";
 import {UserProfile} from "../../pages/Profile/UserProfile"
+import { PageNotFound } from "../../pages/PageNotFound/PageNotFound";
 
 
 export function RouteDetails() {
@@ -47,6 +48,7 @@ export function RouteDetails() {
             </PrivateRoute>
           }
         />
+        <Route path="*" element={<PageNotFound/>}/>
       </Routes>
     </>
   );
