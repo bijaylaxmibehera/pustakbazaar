@@ -71,7 +71,7 @@ export const dataReducer = (state, action) => {
         addresses: [...state.addresses, action.payload],
       };
 
-    case " DELETE_ADDRESS":
+    case "DELETE_ADDRESS":
       return {
         ...state,
         addresses: state.addresses.filter(({ id }) => id !== action.payload),

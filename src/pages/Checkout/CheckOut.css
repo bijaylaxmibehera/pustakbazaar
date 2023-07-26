@@ -1,0 +1,36 @@
+.checkout-wrapper{
+    margin: 2rem auto;
+    width: 90vw;
+}
+.checkout-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.mb-2{
+    margin-bottom: 2rem;
+}
+.flex-col-50{
+    width: 100%;
+    padding: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .checkout-container{
+        flex-direction: row;
+    }
+    .flex-col-50{
+        width: 50%;
+    }
+  }
+
+ 
+  @media only screen and (min-width: 1024px) {
+    .checkout-container{
+        /* justify-content: center;
+        align-items: center; */
+    }
+    .flex-col-50{
+        width: 50%;
+    }
+  }

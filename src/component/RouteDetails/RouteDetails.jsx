@@ -12,6 +12,8 @@ import { Wishlist } from "../../pages/Wishlist/Wishlist";
 import { UserProfile } from "../../pages/Profile/UserProfile";
 import { PageNotFound } from "../../pages/PageNotFound/PageNotFound";
 import { OrderPlaced } from "../../pages/OrderPlaced/OrderPlaced";
+import { Address } from "../../pages/Address/Address";
+import { CheckOut } from "../../pages/Checkout/CheckOut";
 
 export function RouteDetails() {
   return (
@@ -56,10 +58,26 @@ export function RouteDetails() {
           }
         />
         <Route
+          path="/checkout"
+          element={
+            <PrivateRoute>
+              <CheckOut />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/address"
+          element={
+            <PrivateRoute>
+              <Address/>
+            </PrivateRoute>
+          }
+        />
+        <Route
           path="/placedorder"
           element={
             <PrivateRoute>
-              <OrderPlaced />
+              <OrderPlaced/>
             </PrivateRoute>
           }
         />

@@ -21,8 +21,7 @@ export function OrderSummary() {
   const totalAmount =(totalPrice-totalDiscount)+deliveryCharges;
 
   const handleOrder=()=>{
-    dataDispatch({type:"CLEAR_CART" , payload:cart});
-    navigate("/placedorder");
+    navigate("/checkout");
   }
   return (
     <>
@@ -47,7 +46,7 @@ export function OrderSummary() {
           <p>₹{totalAmount}</p>
         </div>
         <p>You will save ₹{totalDiscount} on this order.</p>
-        <button className="order-btn" onClick={handleOrder}>Place Order</button>
+        <button className="order-btn" onClick={handleOrder}>Check Out</button>
       </div>
     </>
   );
