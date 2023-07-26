@@ -6,6 +6,7 @@ export const DataContext = createContext({
   cart: [],
   wishlist: [],
   products: [],
+  addresses: [],
   loader: false,
   dataDispatch: () => {},
   setLoader: () => {}
@@ -32,6 +33,7 @@ export function DataProvider({ children }) {
         cart: state.cart,
         wishlist: state.wishlist,
         products: state.products,
+        addresses: state.addresses,
         dataDispatch: dispatch,
         loader,
         setLoader,

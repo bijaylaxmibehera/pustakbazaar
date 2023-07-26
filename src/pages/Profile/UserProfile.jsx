@@ -31,9 +31,14 @@ export function UserProfile() {
             <p className="user-info">
               <span>Email: </span> {email}
             </p>
-            <button onClick={() => logoutHandler()} className="btn logout-btn">
-              <NavLink to="/">Logout</NavLink>
-            </button>
+            <div className="action-btn">
+              <button className="btn secondary">
+                <NavLink to="/address">Manage address</NavLink>
+              </button>
+              <button onClick={() => logoutHandler()} className="btn primary">
+                <NavLink to="/">Logout</NavLink>
+              </button>
+            </div>
           </div>
         </div>
       )}

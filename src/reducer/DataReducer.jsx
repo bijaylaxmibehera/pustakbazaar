@@ -2,6 +2,17 @@ export const initialState = {
   products: [],
   cart: [],
   wishlist: [],
+  addresses: [
+    {
+      id: "1",
+      name: "Bijaylaxmi Behera",
+      phone: "9967208421",
+      city: "Baripada",
+      state: "Odisha",
+      pin: "757001",
+      addressText: "University road,Baripada, Mayurbhanj, Odisha 751020",
+    },
+  ],
 };
 
 export const dataReducer = (state, action) => {
@@ -29,12 +40,11 @@ export const dataReducer = (state, action) => {
         wishlist: [],
       };
     case "ADD_TO_CART":
-        return {
-          ...state,
-          cart: [...action.payload],
-        };
-    
-     
+      return {
+        ...state,
+        cart: [...action.payload],
+      };
+
     case "REMOVE_FROM_CART":
       return {
         ...state,
@@ -55,6 +65,26 @@ export const dataReducer = (state, action) => {
         ...state,
         wishlist: [...action.payload],
       };
+    case "ADD_ADDRESS":
+      return {
+        ...state,
+        addresses: [...state.addresses, action.payload],
+      };
+
+    case " DELETE_ADDRESS":
+      return {
+        ...state,
+        addresses: state.addresses.filter(({ id }) => id !== action.payload),
+      };
+
+    case "EDIT_ADDRESS":
+      return {
+        ...state,
+        addresses: state.addresses.map((item) =>
+          item.id === action.payload.id ? action.payload : item
+        ),
+      };
+
     default:
       return state;
   }
