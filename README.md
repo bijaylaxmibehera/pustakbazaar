@@ -24,8 +24,9 @@ Install pustak bazaar with npm
 - Filter and sort products
 - Search products
 - Product details page
-- Cart Management
-- Wishlist Management
+- Cart management
+- Wishlist management
+- Address management
 - User Authentication
 - Responsive ui
 
