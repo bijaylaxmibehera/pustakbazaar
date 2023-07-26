@@ -29,7 +29,6 @@ export function Footer() {
             <div>
                 <NavLink to="/signup">Signup</NavLink>
                 <NavLink to="/login">Login</NavLink>
-                <NavLink to="/">Home</NavLink>
                 <NavLink to="/products">Books</NavLink>
                 <NavLink to="/cart">Cart</NavLink>
                 <NavLink to="/wishlist">Wishlist</NavLink>
